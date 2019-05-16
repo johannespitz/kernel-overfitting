@@ -231,6 +231,12 @@ def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=100):
                     K_test = None
                     utils.reset()
 
+                    print()
+                    print()
+                    print(trainers)
+                    print()
+                    print()
+
     print("Done")
     return trainers
 
