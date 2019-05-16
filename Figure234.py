@@ -62,7 +62,7 @@ kernel_dict["Gaussian"] = (kernel_sgd, kernel_inv)
 ### Size 
 
 # size_list = [200, 400]
-size_list = [2000, 4000, 10000, 20000, 40000, 50000]
+size_list = [2000, 4000, 10000, 20000, 50000]
 
 
 ### Noise

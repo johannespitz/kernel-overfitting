@@ -114,8 +114,6 @@ def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=100):
 
                 for noise in noise_list:
 
-                    utils.reset()
-
                     name = 'D:' + dataset_name + ' K:' + kernel_name + ' S:' + str(size) + ' N:' + str(noise)
                     print(name)
                     trainer = {'dataset': dataset_name, 'kernel': kernel_name, 'size': size, 'noise': noise}
@@ -200,6 +198,10 @@ def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=100):
                             print("train error: %.2f%%\ttest error: %.2f%% (%d epochs, %.2f seconds)" %
                                  ((1 - tr_score[1]) * 100, (1 - te_score[1]) * 100, epoch, train_ts))
 
+                    alpah_sgd = np.array(model.get_layer("trainable").get_weights()[0])
+                    
+                    del model
+                    utils.reset()
 
                     # linear system        
 
@@ -222,10 +224,13 @@ def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=100):
 
                         trainer['inv_norm'] = my_norm(alpha, K_train)
                         
-                    trainer['sgd_norm'] = my_norm(model.get_layer("trainable").get_weights()[0], K_train)
+                    trainer['sgd_norm'] = my_norm(alpah_sgd, K_train)
                     trainers[name] = trainer  
 
-    utils.reset()  
+                    K_train = None
+                    K_test = None
+                    utils.reset()
+
     print("Done")
     return trainers
 
