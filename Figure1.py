@@ -48,8 +48,8 @@ M = 5000            # (EigenPro) subsample size
 k = 160             # (EigenPro) top-k eigensystem
 
 
-# for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
-for dataset in ['MNIST']:
+for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
+# for dataset in ['MNIST']:
 
    if dataset is 'MNIST':
       num_classes = 10  
@@ -167,6 +167,9 @@ for dataset in ['MNIST']:
          print("%s\t\ttrain error: %.2f%%\ttest error: %.2f%% (%d epochs, %.2f seconds)" %
                (name, (1 - tr_score[1]) * 100, (1 - te_score[1]) * 100, epoch, train_ts))
          initial_epoch = epoch
+
+      del trainer.model
+      utils.reset()
 
 
    trainers_dict = {}

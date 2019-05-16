@@ -26,19 +26,19 @@ y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
 dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
 dataset_dict['MNIST'] = dataset
 
-num_classes = 10
-(x_train_full, y_train_full), (x_test_full, y_test_full) = ciphar.load()
-y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
-y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
-dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
-dataset_dict['CIPHAR'] = dataset
+# num_classes = 10
+# (x_train_full, y_train_full), (x_test_full, y_test_full) = ciphar.load()
+# y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
+# y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
+# dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
+# dataset_dict['CIPHAR'] = dataset
 
-num_classes = 2
-(x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(1)
-y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
-y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
-dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
-dataset_dict['Synthetic1'] = dataset
+# num_classes = 2
+# (x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(1)
+# y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
+# y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
+# dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
+# dataset_dict['Synthetic1'] = dataset
 
 num_classes = 2
 (x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(2)
@@ -68,7 +68,7 @@ kernel_dict["Laplace"] = (kernel_sgd_l, kernel_inv_l)
 ### Size 
 
 # size_list = [200, 400, 600, 2000]
-size_list = [2000, 4000, 10000, 20000, 40000, 50000]
+size_list = [2000, 4000, 10000, 20000, 50000]
 
 
 
