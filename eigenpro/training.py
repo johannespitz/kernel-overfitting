@@ -44,7 +44,7 @@ if StrictVersion(keras.__version__) > StrictVersion('2.0.8'):
                    '\tpip install Keras==2.0.8\n\n' %(keras.__version__), Warning)
 
 assert keras.backend.backend() == u'tensorflow',        "Requires Tensorflow (>=1.2.1)."
-# assert hasGPU(), "Requires GPU."
+assert hasGPU(), "Requires GPU."
 
 
 # In[29]:
@@ -101,7 +101,7 @@ def my_norm(alpha, K):
 # In[38]:
 
 
-def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=50):
+def training(data_set_dict, kernel_dict, size_list, noise_list, MAXEPOCH=100):
     
     trainers = {}    
     
