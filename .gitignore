@@ -3,4 +3,5 @@ output/
 __pycache__/
 old_notebooks/
 .ipynb_checkpoints/
+slurm_jobs/
 

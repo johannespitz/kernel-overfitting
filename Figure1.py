@@ -168,8 +168,7 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
                (name, (1 - tr_score[1]) * 100, (1 - te_score[1]) * 100, epoch, train_ts))
          initial_epoch = epoch
 
-      del trainer.model
-      utils.reset()
+   utils.reset()
 
 
    trainers_dict = {}
@@ -185,6 +184,9 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
          s = 10
          kernel = lambda x,y: training.Laplace(x, y, s) 
          
+      x_train = x_train[:30000]
+      y_train = y_train[:30000]
+      
       K = kernel(x_train, x_train)
       alpha_lin = np.linalg.solve(K, y_train)    
       pred_train = K.T.dot(alpha_lin)    
@@ -195,7 +197,10 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
       trainers_dict[name]['lin_train_mse'] = mse
       trainers_dict[name]['lin_train_ce'] = miss
       
-      
+      print('train')
+      K = None
+      utils.reset()
+
       testK = kernel(x_train, x_test)
       pred_test = testK.T.dot(alpha_lin)
       
@@ -204,6 +209,10 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
       miss = np.count_nonzero(np.argmax(pred_test, axis=1) - np.argmax(y, axis=1)) / y.shape[0]  
       trainers_dict[name]['lin_test_mse'] = mse
       trainers_dict[name]['lin_test_ce'] = miss
+
+      print('test')
+      testK = None
+      utils.reset()
 
    trainers_dict
 
