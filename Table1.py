@@ -68,7 +68,7 @@ kernel_dict["Laplace"] = (kernel_sgd_l, kernel_inv_l)
 ### Size 
 
 # size_list = [400]
-size_list = [10000] # or [60000]
+size_list = [30000] # or [60000]
 
 
 
