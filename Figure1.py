@@ -184,9 +184,6 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
          s = 10
          kernel = lambda x,y: training.Laplace(x, y, s) 
          
-      x_train = x_train[:30000]
-      y_train = y_train[:30000]
-      
       K = kernel(x_train, x_train)
       alpha_lin = np.linalg.solve(K, y_train)    
       pred_train = K.T.dot(alpha_lin)    
