@@ -1,0 +1,100 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+
+\begin{axis}[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={MNIST, 10000 Traing Samples},
+x grid style={white!69.01960784313725!black},
+xlabel={Noise},
+xmin=-5, xmax=105,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification Val},
+ymin=-4.5175, ymax=94.8675,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+0 2.7
+10 12.62
+20 24.04
+30 39.03
+40 50.73
+50 61.18
+60 69.85
+70 78.48
+80 85.54
+90 89.16
+100 90.28
+};
+\addlegendentry{Gaussian, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+0 2.66
+10 12.94
+20 25.16
+30 37.02
+40 49.26
+50 60.5
+60 71.2
+70 79.53
+80 85.6
+90 89.02
+100 90.35
+};
+\addlegendentry{Gaussian, Interpolation}
+\addplot [semithick, color1]
+table {%
+0 3.68000000000001
+10 11.78
+20 21.63
+30 30.45
+40 39.79
+50 49.76
+60 61.08
+70 71.69
+80 81.45
+90 88.05
+100 90.3
+};
+\addlegendentry{Laplace, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+0 3.27
+10 11.78
+20 21.71
+30 30.46
+40 39.89
+50 50.25
+60 61.24
+70 71.36
+80 80.87
+90 88.02
+100 89.97
+};
+\addlegendentry{Laplace, Interpolation}
+\addplot [semithick, color2]
+table {%
+0 0
+10 9
+20 18
+30 27
+40 36
+50 45
+60 54
+70 63
+80 72
+90 81
+100 90
+};
+\addlegendentry{Bayes Optimal}
+\end{axis}
+
+\end{tikzpicture}

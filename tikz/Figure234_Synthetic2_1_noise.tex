@@ -1,0 +1,44 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={1% Noise},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-330, xmax=15730,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification Val [\%]},
+ymin=18.165, ymax=24.655,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+400 18.46
+1000 19.59
+2000 20.93
+4000 21.43
+10000 20.62
+15000 21.34
+};
+\addlegendentry{Overfitting}
+\addplot [semithick, color1]
+table {%
+400 20.7
+1000 22.31
+2000 23.5
+4000 23.13
+10000 22.06
+15000 24.36
+};
+\addlegendentry{Interpolation}
+\end{axis}
+
+\end{tikzpicture}

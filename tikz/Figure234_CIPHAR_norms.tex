@@ -1,0 +1,76 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+
+\begin{axis}[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={CIPHAR},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-400, xmax=52400,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Norm},
+ymin=99.61991, ymax=1756.68829,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 193.63414
+4000 343.6883
+10000 590.3368
+20000 946.9851
+50000 1613.4734
+};
+\addlegendentry{0 added noise, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+2000 235.81662
+4000 366.97018
+10000 664.146
+20000 1056.458
+};
+\addlegendentry{0 added noise, Interpolation}
+\addplot [semithick, color1]
+table {%
+2000 193.992
+4000 344.36987
+10000 592.47156
+20000 950.1037
+50000 1620.9446
+};
+\addlegendentry{1 added noise, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+2000 236.1676
+4000 367.7313
+10000 666.62976
+20000 1059.6277
+};
+\addlegendentry{1 added noise, Interpolation}
+\addplot [semithick, color2]
+table {%
+2000 174.9412
+4000 333.78836
+10000 609.5667
+20000 981.5644
+50000 1681.367
+};
+\addlegendentry{10 added noise, Overfitting}
+\addplot [semithick, color2, dashed]
+table {%
+2000 240.10399
+4000 378.7047
+10000 690.4666
+20000 1098.6453
+};
+\addlegendentry{10 added noise, Interpolation}
+\end{axis}
+
+\end{tikzpicture}

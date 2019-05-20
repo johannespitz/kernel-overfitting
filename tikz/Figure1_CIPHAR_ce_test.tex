@@ -1,0 +1,53 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=0.0499999999999999, xmax=20.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification Val},
+ymin=48.021, ymax=60.319,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 58.41
+2 55.98
+5 53.79
+10 51.47
+20 51.71
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+0.0499999999999998 59.76
+20.95 59.76
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 56.34
+2 51.62
+5 49.43
+10 48.63
+20 48.58
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+0.0499999999999998 51.81
+20.95 51.81
+};
+\addlegendentry{Laplace, Interpolation}
+\end{axis}
+
+\end{tikzpicture}

@@ -1,0 +1,76 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+
+\begin{axis}[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={MNIST},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-400, xmax=52400,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Norm},
+ymin=24.8584635, ymax=962.0887465,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 67.45984
+4000 93.18335
+10000 146.75801
+20000 188.58728
+50000 320.90314
+};
+\addlegendentry{0 added noise, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+2000 92.26589
+4000 123.24263
+10000 188.81133
+20000 260.99084
+};
+\addlegendentry{0 added noise, Interpolation}
+\addplot [semithick, color1]
+table {%
+2000 84.37551
+4000 122.669075
+10000 190.41046
+20000 297.90283
+50000 481.85666
+};
+\addlegendentry{1 added noise, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+2000 98.48425
+4000 137.83052
+10000 205.04237
+20000 339.2852
+};
+\addlegendentry{1 added noise, Interpolation}
+\addplot [semithick, color2]
+table {%
+2000 130.65724
+4000 204.1885
+10000 365.62613
+20000 536.55164
+50000 919.48737
+};
+\addlegendentry{10 added noise, Overfitting}
+\addplot [semithick, color2, dashed]
+table {%
+2000 149.48492
+4000 242.20311
+10000 451.71783
+20000 804.896
+};
+\addlegendentry{10 added noise, Interpolation}
+\end{axis}
+
+\end{tikzpicture}

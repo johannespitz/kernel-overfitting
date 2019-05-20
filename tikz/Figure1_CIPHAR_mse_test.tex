@@ -1,0 +1,53 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=0.0499999999999999, xmax=20.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Val},
+ymin=0.0643766672798805, ymax=0.100530757748577,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.0805545403003693
+2 0.0784875417947769
+5 0.0756884337902069
+10 0.0742671638846397
+20 0.0762114515066147
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+0.0499999999999998 0.09888739
+20.95 0.09888739
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.0753805869102478
+2 0.0692788743019104
+5 0.0670730216264725
+10 0.066104644382
+20 0.0660200350284576
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+0.0499999999999998 0.06876267
+20.95 0.06876267
+};
+\addlegendentry{Laplace, Interpolation}
+\end{axis}
+
+\end{tikzpicture}

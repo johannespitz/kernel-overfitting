@@ -1,0 +1,53 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{axis}[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=0.0499999999999999, xmax=20.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Train},
+ymin=-0.00283042043797803, ymax=0.0594390468952167,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.0566086165618896
+2 0.0436287246358395
+5 0.0253635402309895
+10 0.0139575224804878
+20 0.00698394239738584
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+0.0499999999999998 9.895349e-09
+20.95 9.895349e-09
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.0436466790664196
+2 0.0227656432318687
+5 0.00546282425567508
+10 0.000669248811677098
+20 2.50963419990148e-05
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+0.0499999999999998 2.598726e-10
+20.95 2.598726e-10
+};
+\addlegendentry{Laplace, Interpolation}
+\end{axis}
+
+\end{tikzpicture}

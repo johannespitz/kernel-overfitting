@@ -1,0 +1,85 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+
+\begin{axis}[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Synthetic1},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-330, xmax=15730,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Norm},
+ymin=-11.4753027566422, ymax=341.087130927897,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+400 4.96369265196995
+1000 6.75460122723148
+2000 8.0359561009169
+4000 9.13901303139026
+10000 10.0426201588099
+15000 11.3515789275589
+};
+\addlegendentry{0 added noise, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+400 4.8111766408667
+1000 6.93036714816544
+2000 9.90087439275273
+4000 13.7731946416335
+10000 19.4105055193892
+15000 22.1159226309485
+};
+\addlegendentry{0 added noise, Interpolation}
+\addplot [semithick, color1]
+table {%
+400 4.55026241083683
+1000 7.96923241207076
+2000 12.1296933407756
+4000 19.7997740591554
+10000 59.7581760707086
+15000 66.4863417630263
+};
+\addlegendentry{1 added noise, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+400 7.05479130469127
+1000 13.6885422539045
+2000 22.8827470575854
+4000 36.2697077965065
+10000 87.5976998666597
+15000 109.884465637077
+};
+\addlegendentry{1 added noise, Interpolation}
+\addplot [semithick, color2]
+table {%
+400 9.69506451082635
+1000 24.3488156626018
+2000 44.3468423193283
+4000 68.8750556472285
+10000 166.41674668806
+15000 234.174843266354
+};
+\addlegendentry{10 added noise, Overfitting}
+\addplot [semithick, color2, dashed]
+table {%
+400 20.5752861486869
+1000 39.5619451509641
+2000 65.9126008803208
+4000 123.252215922517
+10000 242.091784140489
+15000 325.061565760418
+};
+\addlegendentry{10 added noise, Interpolation}
+\end{axis}
+
+\end{tikzpicture}
