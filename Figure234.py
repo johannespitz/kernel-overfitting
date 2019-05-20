@@ -19,19 +19,19 @@ from eigenpro import training
 
 dataset_dict = {}
 
-num_classes = 10
-(x_train_full, y_train_full), (x_test_full, y_test_full) = mnist.load()
-y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
-y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
-dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
-dataset_dict['MNIST'] = dataset
+#num_classes = 10
+#(x_train_full, y_train_full), (x_test_full, y_test_full) = mnist.load()
+#y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
+#y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
+#dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
+#dataset_dict['MNIST'] = dataset
 
-num_classes = 10
-(x_train_full, y_train_full), (x_test_full, y_test_full) = ciphar.load()
-y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
-y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
-dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
-dataset_dict['CIPHAR'] = dataset
+#num_classes = 10
+#(x_train_full, y_train_full), (x_test_full, y_test_full) = ciphar.load()
+#y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
+#y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
+#dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
+#dataset_dict['CIPHAR'] = dataset
 
 num_classes = 2
 (x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(1)
@@ -62,8 +62,8 @@ kernel_dict["Gaussian"] = (kernel_sgd, kernel_inv)
 ### Size 
 
 # size_list = [200, 400]
-size_list = [2000, 4000, 10000, 20000, 50000]
-
+#size_list = [2000, 4000, 10000, 20000, 50000]
+size_list = [400, 1000, 2000, 4000, 10000, 15000, 20000]
 
 ### Noise
 

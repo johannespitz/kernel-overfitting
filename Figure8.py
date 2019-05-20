@@ -32,32 +32,32 @@ dataset_dict['MNIST'] = dataset
 
 kernel_dict = {}
 
-sg = 5
+sg = np.float(3.6)
 kernel_sgd_g1 = lambda x,y: kernels.Gaussian(x, y, sg)
 kernel_inv_g1 = lambda x,y: training.Gaussian(x, y, sg)
-kernel_dict["Gaussian *1"] = (kernel_sgd_g1, kernel_inv_g1)
+#kernel_dict["Gaussian *1"] = (kernel_sgd_g1, kernel_inv_g1)
 
-kernel_sgd_g05 = lambda x,y: kernels.Gaussian(x, y, sg / 2)
-kernel_inv_g05 = lambda x,y: training.Gaussian(x, y, sg / 2)
+kernel_sgd_g05 = lambda x,y: kernels.Gaussian(x, y, sg)
+kernel_inv_g05 = lambda x,y: training.Gaussian(x, y, sg)
 kernel_dict["Gaussian /2"] = (kernel_sgd_g05, kernel_inv_g05)
 
 kernel_sgd_g2 = lambda x,y: kernels.Gaussian(x, y, sg * 2)
 kernel_inv_g2 = lambda x,y: training.Gaussian(x, y, sg * 2)
-kernel_dict["Gaussian *2"] = (kernel_sgd_g2, kernel_inv_g2)
+#kernel_dict["Gaussian *2"] = (kernel_sgd_g2, kernel_inv_g2)
 
 
 sl = 10
 kernel_sgd_l1 = lambda x,y: kernels.Laplace(x, y, sl)
 kernel_inv_l1 = lambda x,y: training.Laplace(x, y, sl)
-kernel_dict["Laplace *1"] = (kernel_sgd_l1, kernel_inv_l1)
+#kernel_dict["Laplace *1"] = (kernel_sgd_l1, kernel_inv_l1)
 
 kernel_sgd_l05 = lambda x,y: kernels.Laplace(x, y, sl / 2)
 kernel_inv_l05 = lambda x,y: training.Laplace(x, y, sl / 2)
-kernel_dict["Laplace /2"] = (kernel_sgd_l05, kernel_inv_l05)
+#kernel_dict["Laplace /2"] = (kernel_sgd_l05, kernel_inv_l05)
 
 kernel_sgd_l2 = lambda x,y: kernels.Laplace(x, y, sl * 2)
 kernel_inv_l2 = lambda x,y: training.Laplace(x, y, sl * 2)
-kernel_dict["Laplace *2"] = (kernel_sgd_l2, kernel_inv_l2)
+#kernel_dict["Laplace *2"] = (kernel_sgd_l2, kernel_inv_l2)
 
 
 

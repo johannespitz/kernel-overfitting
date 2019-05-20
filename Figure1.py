@@ -48,7 +48,7 @@ M = 5000            # (EigenPro) subsample size
 k = 160             # (EigenPro) top-k eigensystem
 
 
-for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
+for dataset in ['Synthetic1', 'Synthetic2']:
 # for dataset in ['MNIST']:
 
    if dataset is 'MNIST':
@@ -64,12 +64,9 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
       num_classes = 2
       (x_train, y_train), (x_test, y_test) = synthetic.load(2)
 
-   # ### NOGPU
-   # size = 1000
-   # x_train = x_train[0:size]
-   # y_train = y_train[0:size]
-   # M = 400
-   # ### NOGPU End
+   size = 25000
+   x_train = x_train[0:size]
+   y_train = y_train[0:size]
 
    n, D = x_train.shape    # (n_sample, n_feature)
 
@@ -152,7 +149,7 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic1', 'Synthetic2']:
       initial_epoch=0
       np.random.seed(1) # Keras uses numpy random number generator
       train_ts = 0 # training time in seconds
-      for epoch in [1, 2, 5, 10, 20]:
+      for epoch in [1, 2, 5, 10, 20, 50, 100]:
          start = time.time()
          trainer.model.fit(
                trainer.x_train, y_train,
