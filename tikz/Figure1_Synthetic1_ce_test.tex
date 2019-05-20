@@ -14,42 +14,42 @@ xlabel={Epochs},
 xmin=-3.95, xmax=104.95,
 xtick style={color=black},
 y grid style={white!69.01960784313725!black},
-ylabel={MSE Val},
-ymin=0.0665110607803831, ymax=0.100639523772363,
+ylabel={Missclassification Val},
+ymin=-0.055, ymax=0.055,
 ytick style={color=black}
 ]
 \addplot [semithick, color0]
 table {%
-1 0.0787032335877419
-2 0.0770301581382751
-5 0.0740038424015045
-10 0.0753488559246063
-20 0.0781671606302261
-50 0.083062050974369
-100 0.0874954813122749
+1 0
+2 0
+5 0
+10 0
+20 0
+50 0
+100 0
 };
 \addlegendentry{Gauss, EigenPro}
 \addplot [semithick, color0, dashed]
 table {%
--3.95 0.09908823
-104.95 0.09908823
+-3.95 0
+104.95 0
 };
 \addlegendentry{Gauss, Interpolation}
 \addplot [semithick, color1]
 table {%
-1 0.0733752895712853
-2 0.0708400960803032
-5 0.0684849207162857
-10 0.0681086244702339
-20 0.0680623545527458
-50 0.0680661372661591
-100 0.0680661231398582
+1 0
+2 0
+5 0
+10 0
+20 0
+50 0
+100 0
 };
 \addlegendentry{Laplace, EigenPro}
 \addplot [semithick, color1, dashed]
 table {%
--3.95 0.06806586
-104.95 0.06806586
+-3.95 0
+104.95 0
 };
 \addlegendentry{Laplace, Interpolation}
 \end{axis}
