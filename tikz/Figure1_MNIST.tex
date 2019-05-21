@@ -1,0 +1,156 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{groupplot}[group style={group size=1 by 3}]
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification Val},
+ymin=1.3755, ymax=2.5745,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 1.97000000000001
+2 1.8
+5 1.49
+10 1.45999999999999
+20 1.43
+50 1.43
+100 1.44
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 1.45
+104.95 1.45
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 2.52
+2 2.25
+5 1.92
+10 1.81
+20 1.8
+50 1.81
+100 1.81
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 1.81
+104.95 1.81
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Val},
+ymin=0.00578777416715398, ymax=0.00994793738393113,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.00847238342352211
+2 0.00741424963325262
+5 0.00644633254334331
+10 0.00613970988634974
+20 0.00601439336836338
+50 0.00597687249518931
+100 0.00597757281251252
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 0.0059802844
+104.95 0.0059802844
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.00975883905589581
+2 0.00843504427075386
+5 0.00737596632614732
+10 0.00710671334825456
+20 0.00705204909183085
+50 0.00704752562716603
+100 0.00704748380798846
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 0.007048261
+104.95 0.007048261
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Train},
+ymin=-0.000266593446894702, ymax=0.0055984645431237,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.00503775364910918
+2 0.00301961279029825
+5 0.00112079571446936
+10 0.00043694364554914
+20 0.000123316638341307
+50 1.87454915568066e-05
+100 3.73774022475897e-06
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 9.81061348673618e-11
+104.95 9.81061348673618e-11
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.00533187099812286
+2 0.00253392365981958
+5 0.000434679593574921
+10 4.00550257177591e-05
+20 7.92580113258217e-07
+50 1.35035890806989e-08
+100 1.28208588851209e-08
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 2.57929348673617e-11
+104.95 2.57929348673617e-11
+};
+\addlegendentry{Laplace, Interpolation}
+\end{groupplot}
+
+\end{tikzpicture}

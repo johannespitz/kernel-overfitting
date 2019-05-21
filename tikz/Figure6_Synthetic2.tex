@@ -1,0 +1,153 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{groupplot}[group style={group size=1 by 3}]
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Synthetic2, 0% Noise},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=1100, xmax=20900,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={CE [\%]},
+ymin=16.0685, ymax=25.1215,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 21.01
+4000 20.85
+10000 20.03
+20000 20.8
+};
+\addlegendentry{Gaussian, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+2000 23.01
+4000 22.53
+10000 21.51
+20000 24.71
+};
+\addlegendentry{Gaussian, Interpolation}
+\addplot [semithick, color1]
+table {%
+2000 16.48
+4000 16.77
+10000 17.49
+20000 16.66
+};
+\addlegendentry{Laplace, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+2000 17.04
+4000 17.18
+10000 16.9
+20000 16.63
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Synthetic2, 1% Noise},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=1100, xmax=20900,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={CE [\%]},
+ymin=16.5075, ymax=25.8025,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 20.94
+4000 21.3
+10000 20.49
+20000 21.61
+};
+\addlegendentry{Gaussian, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+2000 23.59
+4000 22.92
+10000 22.46
+20000 25.38
+};
+\addlegendentry{Gaussian, Interpolation}
+\addplot [semithick, color1]
+table {%
+2000 16.93
+4000 17.04
+10000 17.88
+20000 17.07
+};
+\addlegendentry{Laplace, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+2000 17.38
+4000 17.45
+10000 17.33
+20000 17.24
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Synthetic2, 10% Noise},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=1100, xmax=20900,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={CE [\%]},
+ymin=19.955, ymax=29.525,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 25.33
+4000 25.66
+10000 25.34
+20000 26.25
+};
+\addlegendentry{Gaussian, Overfitting}
+\addplot [semithick, color0, dashed]
+table {%
+2000 27.77
+4000 27.01
+10000 26.74
+20000 29.09
+};
+\addlegendentry{Gaussian, Interpolation}
+\addplot [semithick, color1]
+table {%
+2000 20.39
+4000 20.64
+10000 20.98
+20000 20.72
+};
+\addlegendentry{Laplace, Overfitting}
+\addplot [semithick, color1, dashed]
+table {%
+2000 20.93
+4000 21.02
+10000 20.41
+20000 20.9
+};
+\addlegendentry{Laplace, Interpolation}
+\end{groupplot}
+
+\end{tikzpicture}

@@ -1,0 +1,110 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{groupplot}[group style={group size=1 by 3}]
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={0% Noise},
+x grid style={white!69.01960784313725!black},
+xmin=-400, xmax=52400,
+xtick style={color=black},
+xtick={-10000,0,10000,20000,30000,40000,50000,60000},
+xticklabels={},
+y grid style={white!69.01960784313725!black},
+ylabel={CE Val [\%]},
+ymin=53.0915, ymax=69.9985,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 67.74
+4000 66.1
+10000 62.38
+20000 59.6
+50000 53.86
+};
+\addlegendentry{Overfitting}
+\addplot [semithick, color1]
+table {%
+2000 69.23
+4000 66.68
+10000 63.91
+20000 61.18
+};
+\addlegendentry{Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={1% Noise},
+x grid style={white!69.01960784313725!black},
+xmin=-400, xmax=52400,
+xtick style={color=black},
+xtick={-10000,0,10000,20000,30000,40000,50000,60000},
+xticklabels={},
+y grid style={white!69.01960784313725!black},
+ylabel={CE Val [\%]},
+ymin=53.7435, ymax=70.3865,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 68.15
+4000 66.52
+10000 63.08
+20000 60.01
+50000 54.5
+};
+\addlegendentry{Overfitting}
+\addplot [semithick, color1]
+table {%
+2000 69.63
+4000 67.53
+10000 64.29
+20000 61.71
+};
+\addlegendentry{Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={10% Noise},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-400, xmax=52400,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={CE Val [\%]},
+ymin=58.383, ymax=73.497,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+2000 70.59
+4000 69.51
+10000 66.5
+20000 64.37
+50000 59.07
+};
+\addlegendentry{Overfitting}
+\addplot [semithick, color1]
+table {%
+2000 72.81
+4000 70.86
+10000 68.13
+20000 66.17
+};
+\addlegendentry{Interpolation}
+\end{groupplot}
+
+\end{tikzpicture}
