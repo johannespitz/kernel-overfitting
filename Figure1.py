@@ -48,8 +48,8 @@ M = 5000            # (EigenPro) subsample size
 k = 160             # (EigenPro) top-k eigensystem
 
 
-for dataset in ['Synthetic1', 'Synthetic2']:
-# for dataset in ['MNIST']:
+# for dataset in ['Synthetic1', 'Synthetic2']:
+for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
 
    if dataset is 'MNIST':
       num_classes = 10  
@@ -64,7 +64,7 @@ for dataset in ['Synthetic1', 'Synthetic2']:
       num_classes = 2
       (x_train, y_train), (x_test, y_test) = synthetic.load(2)
 
-   size = 25000
+   size = 40000
    x_train = x_train[0:size]
    y_train = y_train[0:size]
 
@@ -149,7 +149,7 @@ for dataset in ['Synthetic1', 'Synthetic2']:
       initial_epoch=0
       np.random.seed(1) # Keras uses numpy random number generator
       train_ts = 0 # training time in seconds
-      for epoch in [1, 2, 5, 10, 20, 50, 100]:
+      for epoch in [1, 2, 5, 10, 20, 30, 40, 50, 70, 100]:
          start = time.time()
          trainer.model.fit(
                trainer.x_train, y_train,
@@ -192,6 +192,10 @@ for dataset in ['Synthetic1', 'Synthetic2']:
       trainers_dict[name]['lin_train_ce'] = miss
       
       print('train')
+      print('mse')
+      print(mse)
+      print('miss')
+      print(miss)
       K = None
       utils.reset()
 
@@ -205,6 +209,10 @@ for dataset in ['Synthetic1', 'Synthetic2']:
       trainers_dict[name]['lin_test_ce'] = miss
 
       print('test')
+      print('mse')
+      print(mse)
+      print('miss')
+      print(miss)
       testK = None
       utils.reset()
 
