@@ -33,12 +33,12 @@ dataset_dict = {}
 #dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
 #dataset_dict['CIPHAR'] = dataset
 
-num_classes = 2
-(x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(1)
-y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
-y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
-dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
-dataset_dict['Synthetic1'] = dataset
+#num_classes = 2
+#(x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(1)
+#y_train_full = keras.utils.to_categorical(y_train_full, num_classes)
+#y_test_full = keras.utils.to_categorical(y_test_full, num_classes)
+#dataset = ((x_train_full, y_train_full), (x_test_full, y_test_full))
+#dataset_dict['Synthetic1'] = dataset
 
 num_classes = 2
 (x_train_full, y_train_full), (x_test_full, y_test_full) = synthetic.load(2)
@@ -63,11 +63,11 @@ kernel_dict["Gaussian"] = (kernel_sgd, kernel_inv)
 
 # size_list = [200, 400]
 #size_list = [2000, 4000, 10000, 20000, 50000]
-size_list = [400, 1000, 2000, 4000, 10000, 15000, 20000]
+size_list = [400, 1000, 2000, 4000, 10000, 15000, 20000, 25000, 30000, 50000]
 
 ### Noise
 
-noise_list = [0, 1, 10]
+noise_list = [0, 10]
 
 
 ### Training
