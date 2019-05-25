@@ -147,8 +147,8 @@ table {%
 \addlegendentry{Gauss, EigenPro}
 \addplot [semithick, color0, dashed]
 table {%
--3.95 3.01872994122438e-23
-104.95 3.01872994122438e-23
+-3.95 3.0187299412244e-23
+104.95 3.0187299412244e-23
 };
 \addlegendentry{Gauss, Interpolation}
 \addplot [semithick, color1]
@@ -173,4 +173,10 @@ table {%
 \addlegendentry{Laplace, Interpolation}
 \end{groupplot}
 
+\node at ({$(current bounding box.south west)!0.5!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.98!(current bounding box.north west)$})[
+  scale=0.6,
+  anchor=north,
+  text=black,
+  rotate=0.0
+]{Synthetic2, 40000 Training Samples};
 \end{tikzpicture}

@@ -127,7 +127,7 @@ xmin=-3.95, xmax=104.95,
 xtick style={color=black},
 y grid style={white!69.01960784313725!black},
 ylabel={MSE Train},
-ymin=1.35487367788458e-10, ymax=0.152033851294514,
+ymin=1.35487364962836e-10, ymax=0.1520338514455,
 ymode=log,
 ytick style={color=black}
 ]
@@ -147,8 +147,8 @@ table {%
 \addlegendentry{Gauss, EigenPro}
 \addplot [semithick, color0, dashed]
 table {%
--3.95 3.386799e-08
-104.95 3.386799e-08
+-3.95 3.38679900000003e-08
+104.95 3.38679900000003e-08
 };
 \addlegendentry{Gauss, Interpolation}
 \addplot [semithick, color1]
@@ -167,10 +167,16 @@ table {%
 \addlegendentry{Laplace, EigenPro}
 \addplot [semithick, color1, dashed]
 table {%
--3.95 3.4935288e-10
-104.95 3.4935288e-10
+-3.95 3.49352880000003e-10
+104.95 3.49352880000003e-10
 };
 \addlegendentry{Laplace, Interpolation}
 \end{groupplot}
 
+\node at ({$(current bounding box.south west)!0.5!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.98!(current bounding box.north west)$})[
+  scale=0.6,
+  anchor=north,
+  text=black,
+  rotate=0.0
+]{CIPHAR, 40000 Training Samples};
 \end{tikzpicture}

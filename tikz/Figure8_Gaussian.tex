@@ -11,31 +11,16 @@ legend cell align={left},
 legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
 tick align=outside,
 tick pos=left,
-title={Gaussian, 10000 Traing Samples},
+title={Gaussian, 10000 Traing Samples (MNIST)},
 x grid style={white!69.01960784313725!black},
 xlabel={Noise},
 xmin=-5, xmax=105,
 xtick style={color=black},
 y grid style={white!69.01960784313725!black},
 ylabel={Missclassification Val},
-ymin=-4.5205, ymax=94.9305,
+ymin=-4.5175, ymax=94.8675,
 ytick style={color=black}
 ]
-\addplot [semithick, color0]
-table {%
-0 2.7
-10 12.62
-20 24.04
-30 39.04
-40 50.73
-50 61.18
-60 69.85
-70 78.48
-80 85.55
-90 89.16
-100 90.28
-};
-\addlegendentry{Gaussian *1, Overfitting}
 \addplot [semithick, color0, dashed]
 table {%
 0 2.66
@@ -51,21 +36,6 @@ table {%
 100 90.35
 };
 \addlegendentry{Gaussian *1, Interpolation}
-\addplot [semithick, color1]
-table {%
-0 90.2
-10 90.41
-20 90.21
-30 90.17
-40 90.14
-50 90.19
-60 90.25
-70 90.22
-80 90.18
-90 89.98
-100 89.85
-};
-\addlegendentry{Gaussian /2, Overfitting}
 \addplot [semithick, color1, dashed]
 table {%
 0 3.63
@@ -81,21 +51,6 @@ table {%
 100 90.24
 };
 \addlegendentry{Gaussian /2, Interpolation}
-\addplot [semithick, color2]
-table {%
-0 3
-10 12.68
-20 24.63
-30 38.26
-40 50.76
-50 60.49
-60 69.77
-70 78.51
-80 84.48
-90 88.9
-100 90.15
-};
-\addlegendentry{Gaussian *2, Overfitting}
 \addplot [semithick, color2, dashed]
 table {%
 0 2.92

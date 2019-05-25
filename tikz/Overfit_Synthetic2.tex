@@ -1,0 +1,195 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+\definecolor{color2}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+\definecolor{color3}{rgb}{0.83921568627451,0.152941176470588,0.156862745098039}
+
+\begin{groupplot}[group style={group size=1 by 2}]
+\nextgroupplot[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Gauss, 20000 Training Samples, Synthetic 2},
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification},
+ymin=-1.4125, ymax=30.5425,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 14.34
+6 11.64
+11 8.16
+16 6.55
+21 4.23
+26 4.66
+31 2.82
+36 1.88
+41 1.5
+46 2.19
+51 0.87
+56 0.55
+61 0.8
+66 0.54
+71 0.23
+76 0.26
+81 0.22
+86 0.11
+91 0.08
+96 0.04
+100 0.09
+};
+\addlegendentry{0% Noise, Train}
+\addplot [semithick, color1]
+table {%
+1 17.08
+6 18.68
+11 17.38
+16 18.33
+21 17.97
+26 19.25
+31 19.07
+36 19.06
+41 18.96
+46 20.98
+51 19.63
+56 19.61
+61 20.41
+66 20.65
+71 20.44
+76 20.37
+81 20.64
+86 20.62
+91 20.6
+96 21.31
+100 20.8
+};
+\addlegendentry{0% Noise, Test}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 24.71
+104.95 24.71
+};
+\addlegendentry{0% Noise, Interpolation}
+\addplot [semithick, color2]
+table {%
+1 17.55
+6 15.81
+11 10.98
+16 8.32
+21 6.2
+26 6.51
+31 3.12
+36 2.18
+41 1.92
+46 2.32
+51 1.01
+56 0.93
+61 1
+66 0.57
+71 0.36
+76 0.4
+81 0.43
+86 0.19
+91 0.11
+96 0.08
+100 0.1
+};
+\addlegendentry{10% Noise, Train}
+\addplot [semithick, color3]
+table {%
+1 20.68
+6 23.21
+11 21.8
+16 22.49
+21 22.46
+26 23.22
+31 23.05
+36 23.59
+41 23.63
+46 24.66
+51 24.17
+56 23.93
+61 25.16
+66 25.68
+71 24.6
+76 25.54
+81 25.76
+86 26.12
+91 26.39
+96 26.97
+100 26.25
+};
+\addlegendentry{10% Noise, Test}
+\addplot [semithick, color3, dashed]
+table {%
+-3.95 29.09
+104.95 29.09
+};
+\addlegendentry{10% Noise, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Laplace, 20000 Training Samples, Synthetic 2},
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=0.75, xmax=6.25,
+xtick style={color=black},
+xtick={0,1,2,3,4,5,6,7},
+xticklabels={0.0,0.2,0.4,0.6,0.8,1.0,,},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification},
+ymin=-1.1055, ymax=23.2155,
+ytick style={color=black},
+ytick={-5,0,5,10,15,20,25},
+yticklabels={0.0,0.2,0.4,0.6,0.8,1.0,}
+]
+\addplot [semithick, color0]
+table {%
+1 7.84
+5 0
+};
+\addlegendentry{0% Noise, Train}
+\addplot [semithick, color1]
+table {%
+1 16.51
+5 16.66
+};
+\addlegendentry{0% Noise, Test}
+\addplot [semithick, color1, dashed]
+table {%
+0.75 16.63
+6.25 16.63
+};
+\addlegendentry{0% Noise, Interpolation}
+\addplot [semithick, color2]
+table {%
+1 12.54
+6 0
+};
+\addlegendentry{10% Noise, Train}
+\addplot [semithick, color3]
+table {%
+1 22.11
+6 20.72
+};
+\addlegendentry{10% Noise, Test}
+\addplot [semithick, color3, dashed]
+table {%
+0.75 20.9
+6.25 20.9
+};
+\addlegendentry{10% Noise, Interpolation}
+\end{groupplot}
+
+\end{tikzpicture}
