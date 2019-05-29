@@ -1,0 +1,182 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.12156862745098,0.466666666666667,0.705882352941177}
+\definecolor{color1}{rgb}{1,0.498039215686275,0.0549019607843137}
+
+\begin{groupplot}[group style={group size=1 by 3}]
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Missclassification Val},
+ymin=49.459, ymax=60.921,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 60.4
+2 57.67
+5 54.68
+10 53.5
+20 53.48
+30 54.04
+40 54.4
+50 54.76
+70 55.61
+100 55.91
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 59.35
+104.95 59.35
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 58
+2 53.83
+5 50.82
+10 50.05
+20 50.07
+30 50.01
+40 50.01
+50 50.01
+70 50.01
+100 49.98
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 50.07
+104.95 50.07
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Val},
+ymin=0.0661074736891928, ymax=0.101795817443372,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.0844288834095001
+2 0.0814758580327034
+5 0.0773506047010422
+10 0.0765021342277527
+20 0.0786362743258476
+30 0.0799875700235367
+40 0.0812534258246422
+50 0.0828874766588211
+70 0.0848057933330536
+100 0.0869722456455231
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 0.10017362
+104.95 0.10017362
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.0779459864020348
+2 0.0718088944196701
+5 0.0685435033917427
+10 0.067823283803463
+20 0.0677296711325645
+30 0.0677302883863449
+40 0.0677307858705521
+50 0.0677320511102676
+70 0.0677322443604469
+100 0.0677321241497993
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 0.06773233
+104.95 0.06773233
+};
+\addlegendentry{Laplace, Interpolation}
+
+\nextgroupplot[
+legend cell align={left},
+legend style={draw=white!80.0!black},
+log basis y={10},
+tick align=outside,
+tick pos=left,
+x grid style={white!69.01960784313725!black},
+xlabel={Epochs},
+xmin=-3.95, xmax=104.95,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={MSE Train},
+ymin=1.3160120024392e-10, ymax=0.15035893337289,
+ymode=log,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+1 0.0582650200843811
+2 0.0439577604696155
+5 0.0242444433540106
+10 0.0128280880790204
+20 0.00660593919306993
+30 0.00369413069090806
+40 0.00237611274356022
+50 0.00201820709151216
+70 0.00112006965219043
+100 0.000614524658670416
+};
+\addlegendentry{Gauss, EigenPro}
+\addplot [semithick, color0, dashed]
+table {%
+-3.95 4.02076200000003e-08
+104.95 4.02076200000003e-08
+};
+\addlegendentry{Gauss, Interpolation}
+\addplot [semithick, color1]
+table {%
+1 0.0445838549017906
+2 0.0233238532349467
+5 0.00498232710175216
+10 0.000585847072082106
+20 2.00316497564927e-05
+30 2.02893236819364e-06
+40 1.0533386003317e-06
+50 1.04558829455073e-06
+70 1.01539942015734e-06
+100 1.00892431610191e-06
+};
+\addlegendentry{Laplace, EigenPro}
+\addplot [semithick, color1, dashed]
+table {%
+-3.95 3.39610560000002e-10
+104.95 3.39610560000002e-10
+};
+\addlegendentry{Laplace, Interpolation}
+\end{groupplot}
+
+\node at ({$(current bounding box.south west)!0.5!(current bounding box.south east)$}|-{$(current bounding box.south west)!0.98!(current bounding box.north west)$})[
+  scale=0.6,
+  anchor=north,
+  text=black,
+  rotate=0.0
+]{better_grey, 40000 Training Samples};
+\end{tikzpicture}
