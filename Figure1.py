@@ -49,14 +49,14 @@ k = 160             # (EigenPro) top-k eigensystem
 
 
 # for dataset in ['Synthetic1', 'Synthetic2']:
-for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
+for dataset in ['CIPHAR']:
 
    if dataset is 'MNIST':
       num_classes = 10  
       (x_train, y_train), (x_test, y_test) = mnist.load()
    elif dataset is 'CIPHAR':
       num_classes = 10  
-      (x_train, y_train), (x_test, y_test) = ciphar.load()
+      (x_train, y_train), (x_test, y_test) = ciphar.load(grey=False)
    elif dataset is 'Synthetic1':
       num_classes = 2
       (x_train, y_train), (x_test, y_test) = synthetic.load(1)
@@ -65,8 +65,10 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
       (x_train, y_train), (x_test, y_test) = synthetic.load(2)
 
    size = 40000
-   x_train = x_train[0:size]
-   y_train = y_train[0:size]
+
+   print(size)
+   x_train = x_train[:size]
+   y_train = y_train[:size]
 
    n, D = x_train.shape    # (n_sample, n_feature)
 
@@ -99,19 +101,22 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
             kernel_initializer='zeros',
             use_bias=False)(kfeat)
    model = Model(ix, y)
+   #model.compile(loss='mse',
+   #            optimizer=PSGD(pred_t=y,
+   #                           index_t=index,
+   #                           eta=scale*eta,
+   #                           eigenpro_f=lambda g: kf(g, kfeat)),
+   #            metrics=['accuracy'])
    model.compile(loss='mse',
-               optimizer=PSGD(pred_t=y,
-                              index_t=index,
-                              eta=scale*eta,
-                              eigenpro_f=lambda g: kf(g, kfeat)),
-               metrics=['accuracy'])
+                optimizer=PSGD(pred_t=y, index_t=index, eta=eta),
+                metrics=['accuracy'])
    trainers['Gauss'] = Trainer(model=model,
                                  x_train = utils.add_index(x_train),
                                  x_test=utils.add_index(x_test),
                                  tr_scores={},
                                  te_scores={})
 
-
+   
    ## Laplace
 
    # Calculate step size and (Primal) EigenPro preconditioner.
@@ -216,7 +221,7 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
       testK = None
       utils.reset()
 
-   trainers_dict
+   #trainers_dict
 
    with open('output/figure1' + dataset + '-' + time.strftime("%Y%m%d-%H%M%S") + '.txt', 'w') as f:
       print(trainers_dict, file=f)
@@ -224,4 +229,4 @@ for dataset in ['MNIST', 'CIPHAR', 'Synthetic2']:
    print()
    print()
    print()
-   print(trainers)   
+   #print(trainers)   
