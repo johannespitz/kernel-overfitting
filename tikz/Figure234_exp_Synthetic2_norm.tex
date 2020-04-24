@@ -1,0 +1,42 @@
+% This file was created by matplotlib2tikz v0.7.4.
+\begin{tikzpicture}
+
+\definecolor{color0}{rgb}{0.172549019607843,0.627450980392157,0.172549019607843}
+\definecolor{color1}{rgb}{0.83921568627451,0.152941176470588,0.156862745098039}
+
+\begin{axis}[
+legend cell align={left},
+legend style={at={(0.97,0.03)}, anchor=south east, draw=white!80.0!black},
+tick align=outside,
+tick pos=left,
+title={Synthetic2},
+x grid style={white!69.01960784313725!black},
+xlabel={Size},
+xmin=-80, xmax=10480,
+xtick style={color=black},
+y grid style={white!69.01960784313725!black},
+ylabel={Norm},
+ymin=-16.3821139647689, ymax=344.024393260147,
+ytick style={color=black}
+]
+\addplot [semithick, color0]
+table {%
+400 75.2039187231068
+1000 98.70157990588
+2000 186.28992349903
+4000 307.092635334123
+10000 0
+};
+\addlegendentry{0 added noise, Overfitting}
+\addplot [semithick, color1]
+table {%
+400 83.4736064671786
+1000 112.080457455294
+2000 213.469468051983
+4000 327.642279295378
+10000 0
+};
+\addlegendentry{10 added noise, Overfitting}
+\end{axis}
+
+\end{tikzpicture}
