@@ -1,0 +1,47 @@
+D:Synthetic2 K:Gaussian S:50000 N:10
+2019-05-17 17:46:48.323595: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-17 17:46:48.323661: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-17 17:46:48.323668: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-17 17:46:48.323672: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-17 17:46:48.323968: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 23079 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:02:00.0, compute capability: 6.1)
+SVD time: 15.14, Eigenvalue ratio: 4750.14
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+indexed-feat- (InputLayer)   (None, 51)                0         
+_________________________________________________________________
+lambda_1 (Lambda)            (None, 50)                0         
+_________________________________________________________________
+kernel_embedding_2 (KernelEm (None, 50000)             2500000   
+_________________________________________________________________
+trainable (Dense)            (None, 2)                 100000    
+=================================================================
+Total params: 2,600,000
+Trainable params: 100,000
+Non-trainable params: 2,500,000
+_________________________________________________________________
+
+Stochastic Gradient Descent
+train error: 18.89%	test error: 20.83% (1 epochs, 3.00 seconds)
+train error: 15.39%	test error: 21.38% (6 epochs, 8.78 seconds)
+train error: 12.81%	test error: 21.64% (11 epochs, 14.55 seconds)
+train error: 12.17%	test error: 22.52% (16 epochs, 20.32 seconds)
+train error: 9.47%	test error: 22.35% (21 epochs, 26.08 seconds)
+train error: 8.15%	test error: 22.44% (26 epochs, 31.82 seconds)
+train error: 6.76%	test error: 23.51% (31 epochs, 37.59 seconds)
+train error: 6.35%	test error: 23.25% (36 epochs, 43.35 seconds)
+train error: 5.46%	test error: 24.17% (41 epochs, 49.11 seconds)
+train error: 4.84%	test error: 24.50% (46 epochs, 54.87 seconds)
+train error: 4.53%	test error: 24.67% (51 epochs, 60.64 seconds)
+train error: 3.83%	test error: 24.64% (56 epochs, 66.39 seconds)
+train error: 3.91%	test error: 24.43% (61 epochs, 72.14 seconds)
+train error: 3.35%	test error: 25.20% (66 epochs, 77.90 seconds)
+train error: 2.81%	test error: 26.01% (71 epochs, 83.67 seconds)
+train error: 2.51%	test error: 25.47% (76 epochs, 89.43 seconds)
+train error: 2.31%	test error: 25.74% (81 epochs, 95.19 seconds)
+train error: 2.07%	test error: 25.41% (86 epochs, 100.95 seconds)
+train error: 1.84%	test error: 25.94% (91 epochs, 106.71 seconds)
+train error: 1.74%	test error: 25.73% (96 epochs, 112.47 seconds)
+train error: 1.63%	test error: 25.56% (100 epochs, 117.07 seconds)
+Did not reach Zero Train Error
+

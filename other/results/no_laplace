@@ -1,0 +1,30 @@
+D:Synthetic2 K:Laplace S:20000 N:0
+2019-05-17 17:56:01.718739: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0
+2019-05-17 17:56:01.718806: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2019-05-17 17:56:01.718813: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 
+2019-05-17 17:56:01.718817: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N 
+2019-05-17 17:56:01.719143: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 23079 MB memory) -> physical GPU (device: 0, name: Quadro P6000, pci bus id: 0000:02:00.0, compute capability: 6.1)
+SVD time: 5.61, Eigenvalue ratio: 8816.88
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+indexed-feat- (InputLayer)   (None, 51)                0         
+_________________________________________________________________
+lambda_1 (Lambda)            (None, 50)                0         
+_________________________________________________________________
+kernel_embedding_2 (KernelEm (None, 20000)             1000000   
+_________________________________________________________________
+trainable (Dense)            (None, 2)                 40000     
+=================================================================
+Total params: 1,040,000
+Trainable params: 40,000
+Non-trainable params: 1,000,000
+_________________________________________________________________
+
+Stochastic Gradient Descent
+train error: 7.84%	test error: 16.51% (1 epochs, 1.03 seconds)
+train error: 0.00%	test error: 16.66% (5 epochs, 2.43 seconds)
+Zero Train Error
+
+Linear Interpolation
+Classification Error = 0.1663
